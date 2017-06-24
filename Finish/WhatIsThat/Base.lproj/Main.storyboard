@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatIsThat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-img" translatesAutoresizingMaskIntoConstraints="NO" id="8mn-Uy-vSX">
+                                <rect key="frame" x="5" y="40" width="404" height="404"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8mn-Uy-vSX" secondAttribute="height" multiplier="1:1" id="qhR-kz-5jA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please grab a picture first..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uja-2a-uXe">
+                                <rect key="frame" x="20" y="520.66666666666652" width="374" height="26.333333333333371"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5k-NW-dAI">
+                                <rect key="frame" x="158" y="560" width="98" height="30"/>
+                                <state key="normal" title="Grab a picture"/>
+                                <connections>
+                                    <action selector="grabAPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3FD-3t-FLz"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-ov-sXh">
+                                <rect key="frame" x="142.66666666666663" y="458" width="129.33333333333337" height="60.666666666666629"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apl-HI-LY1">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.33333333333334" height="60.666666666666629"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="52"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwp-MK-AAc">
+                                        <rect key="frame" x="104.33333333333334" y="26" width="25" height="29.333333333333371"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e6r-ov-sXh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CG2-aw-sXt"/>
+                            <constraint firstAttribute="trailing" secondItem="8mn-Uy-vSX" secondAttribute="trailing" constant="5" id="Fqq-p3-l26"/>
+                            <constraint firstItem="e6r-ov-sXh" firstAttribute="top" secondItem="8mn-Uy-vSX" secondAttribute="bottom" constant="14" id="Seu-WE-f8h"/>
+                            <constraint firstItem="uja-2a-uXe" firstAttribute="top" secondItem="e6r-ov-sXh" secondAttribute="bottom" constant="2" id="XuC-v0-QVb"/>
+                            <constraint firstItem="uja-2a-uXe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dRI-gT-my5"/>
+                            <constraint firstItem="8mn-Uy-vSX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="fcr-gS-tXi"/>
+                            <constraint firstItem="B5k-NW-dAI" firstAttribute="top" secondItem="uja-2a-uXe" secondAttribute="bottom" constant="13.5" id="qsx-PF-msK"/>
+                            <constraint firstItem="B5k-NW-dAI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tdg-6s-DHe"/>
+                            <constraint firstItem="uja-2a-uXe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="x1W-2F-FMW"/>
+                            <constraint firstItem="8mn-Uy-vSX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="zJK-yy-Qzk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="uja-2a-uXe" id="as1-JN-vES"/>
+                        <outlet property="photoSelected" destination="8mn-Uy-vSX" id="am7-t7-UEP"/>
+                        <outlet property="probability" destination="apl-HI-LY1" id="0QT-5L-USK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="-117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default-img" width="404" height="404"/>
+    </resources>
+</document>
